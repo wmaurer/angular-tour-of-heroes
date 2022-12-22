@@ -1,7 +1,7 @@
 {
     "root": true,
     "ignorePatterns": ["!**/*"],
-    "plugins": ["@nrwl/nx"],
+    "plugins": ["@nrwl/nx", "import"],
     "overrides": [
         {
             "files": ["*.ts"],
@@ -25,6 +25,28 @@
                         "type": "element",
                         "prefix": "app",
                         "style": "kebab-case"
+                    }
+                ],
+                "import/order": [
+                    "error",
+                    {
+                        "groups": ["builtin", "external", "internal", "parent", "sibling", "index"],
+                        "newlines-between": "always",
+                        "pathGroupsExcludedImportTypes": ["builtin"],
+                        "alphabetize": {
+                            "order": "asc",
+                            "caseInsensitive": true
+                        }
+                    }
+                ],
+                "sort-imports": [
+                    "error",
+                    {
+                        "ignoreCase": false,
+                        "ignoreDeclarationSort": true,
+                        "ignoreMemberSort": false,
+                        "memberSyntaxSortOrder": ["none", "all", "multiple", "single"],
+                        "allowSeparatedGroups": false
                     }
                 ]
             }
