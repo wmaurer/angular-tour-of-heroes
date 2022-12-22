@@ -15,7 +15,7 @@
                     "error",
                     {
                         "type": "attribute",
-                        "prefix": "angularTourOfHeroes",
+                        "prefix": "app",
                         "style": "camelCase"
                     }
                 ],
@@ -23,7 +23,7 @@
                     "error",
                     {
                         "type": "element",
-                        "prefix": "angular-tour-of-heroes",
+                        "prefix": "app",
                         "style": "kebab-case"
                     }
                 ]
